@@ -93,12 +93,5 @@ onClick={handleChange && transcription} >Transcribe </button>
 
  );
  
- </ div>
-
- );
-
- </ div > 
-
- ) ; 
-
- export default App ; 
+);
+ export default App() ; 
