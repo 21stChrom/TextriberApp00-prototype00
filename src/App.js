@@ -23,21 +23,20 @@ const [ transcription , setTranscription ] = useState ( " " ) ;
 
  const [ qrValue , setQrValue ] = useState ( " " ) ; 
 
- const handleFileSelect = (e)=> { const file = e.target.files [ 0 ] ; const reader = new FileReader ( ) ; 
+ const handleFileSelect = (e)=> { const file = e.target.files [ 0 ] ; const reader = new FileReader()
 
- reader.readAsDataURL ( file ) ; reader.onload = ( ) => { setImageUrl ( reader.result ) ; 
-
- } ; 
+ reader.readAsDataURL ( file ); reader.onload = ( ) => { setImageUrl ( reader.result ) ; 
 
  } ; 
 
- const handleTranscribe = async ( ) => { 
+ } ; 
 
- const { data : { text } } = await Tesseract.recognize ( imageUrl , 
+ const { handleTranscribe } = async ( ) => { 
 
- ' eng ' ) ; 
-
- setTranscription ( text ) ; 
+ { data : { text } } await Tesseract.recognize ( imageUrl, 
+ 'eng' ) ; 
+ 
+ const setTranscription = { text }; 
 
  setQrValue ( text ) ; 
  
@@ -93,8 +92,8 @@ onClick={handleChange && transcription} >Transcribe </button>
  
 
  </ div > 
-
+</div>
  );
  
-);
- export default App() ; 
+ }
+ export default App(); 
