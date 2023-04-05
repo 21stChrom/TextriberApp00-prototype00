@@ -1,5 +1,5 @@
 import React , { useState } from ' react ' ; 
-
+import ReactDO from 'reactdom';
 import Tesseract from 
 
 ' tesseract.js ' ; 
@@ -7,6 +7,9 @@ import Tesseract from
 import QRCode from 
 
 ' qrcode.react ' ; 
+
+
+
 
 import { saveAs } from 
 
