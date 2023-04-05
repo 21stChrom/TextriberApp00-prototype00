@@ -13,11 +13,11 @@ import QRCode from
 
 import { saveAs } from 
 
-' file - saver ' ; 
+' file-saver ' ; 
 
 function App ( ) { 
 
-const [ imageUrl , setImageUrl ] = useState ( " " ) ; 
+const {imageUrl , setImageUrl } = useState ( " " ) ; 
 
 const [ transcription , setTranscription ] = useState ( " " ) ;
 
@@ -33,10 +33,10 @@ const [ transcription , setTranscription ] = useState ( " " ) ;
 
  const { handleTranscribe } = async ( ) => { 
 
- { data : { text } } await Tesseract.recognize ( imageUrl, 
+ { data : { text } } await Tesseract.recognize( imageUrl, 
  'eng' ) ; 
  
- const setTranscription = { text }; 
+ const setTranscribe = { text }; 
 
  setQrValue ( text ) ; 
  
